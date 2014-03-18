@@ -1,0 +1,25 @@
+<h1> Plant Index </h1> 
+
+<table> 
+	<tr>
+		<th> Name </th>
+		<th> Length </th>
+		<th> Width </th>
+		<th> Height </th>
+		<th> Area </th>
+		<th> Volume </th>
+		<td> </th>
+	</tr>
+
+	<% @plants.each do |plant| %>
+		<tr>
+			<td> <%= plant.name %> </td>
+			<td> <%= plant.length %> </td>
+			<td> <%= plant.width %> </td>
+			<td> <%= plant.height %> </td>
+			<td> <%= plant.area %> </td>
+			<td> <%= plant.volume %> </td>
+			<td> <%= link_to "Show Plant", plant_path(plant) %> </td>
+		</tr>
+	<% end %>
+</table>
